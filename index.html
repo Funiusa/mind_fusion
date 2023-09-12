@@ -57,6 +57,7 @@
 
 
 
+
     </style>
 </head>
 <body>
@@ -77,20 +78,29 @@
         </div>
     </div>
 
-    <button class="button" id="close">Close</button>
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
 <script>
     let tg = window.Telegram.WebApp;
+    tg.expand();
+
     let mario = document.getElementById("mario");
-    mario.addEventListener("click", () => {
-        tg.close();
-    });
+    let albert = document.getElementById("albert");
     let close = document.getElementById("close");
-    close.addEventListener("click", () => {
+
+    mario.addEventListener("click", () => {
+        var altText = this.querySelector(".image").alt;
+        tg.sendData(altText);
         tg.close();
     });
+
+    albert.addEventListener("click", () => {
+        var altText = this.querySelector(".image").alt;
+        tg.sendData(altText);
+        tg.close();
+    });
+
 
 </script>
 
