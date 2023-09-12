@@ -53,33 +53,46 @@
             color: #27A7E7;
 }
 
+
+
+
+
     </style>
 </head>
 <body>
 <div class="card-container" id="main">
     <div class="container" id="char">
-        <a href="images/mario.png" target="_blank">
+
+        <div class="button-container" id="mario">
             <img class="image" src="images/mario.png" alt="Mario">
-        </a>
-        <h2>Mario</h2>
-        <p>Character</p>
+            <h2>Mario</h2>
+            <p>Character</p>
+        </div>
     </div>
     <div class="container">
-        <a href="images/albert.png" target="_blank">
+        <div class="button-container" id="albert">
             <img class="image" src="images/albert.png" alt="Albert">
-        </a>
-        <h2>Albert</h2>
-        <p>Theoretical physicist</p>
+            <h2>Albert</h2>
+            <p>Theoretical physicist</p>
+        </div>
     </div>
-</div>
-<script src="https://telegram.org/js/telegram-web-app.js">
 
+    <button class="button" id="close">Close</button>
+</div>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script>
     let tg = window.Telegram.WebApp;
-    let char = document.getElementById("char");
-    char.addEventListener("click", () => {
+    let mario = document.getElementById("mario");
+    mario.addEventListener("click", () => {
+        tg.close();
+    });
+    let close = document.getElementById("close");
+    close.addEventListener("click", () => {
         tg.close();
     });
 
 </script>
+
 </body>
 </html>
