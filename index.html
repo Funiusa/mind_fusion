@@ -63,16 +63,15 @@
 </head>
 <body>
 <div class="card-container" id="main">
-    <div class="container" id="char">
-
-        <div class="button-container" id="mario">
+    <div class="container" id="mario">
+        <div class="button-container" >
             <img class="image" src="images/mario.png" alt="Mario">
             <h2>Mario</h2>
             <p>Character</p>
         </div>
     </div>
-    <div class="container">
-        <div class="button-container" id="albert">
+    <div class="container" id="albert">
+        <div class="button-container">
             <img class="image" src="images/albert.png" alt="Albert">
             <h2>Albert</h2>
             <p>Theoretical physicist</p>
@@ -89,18 +88,17 @@
     let mario = document.getElementById("mario");
     let albert = document.getElementById("albert");
 
-    mario.addEventListener("click", () => {
+    mario.addEventListener("click", function() {
         var altText = this.querySelector(".image").alt;
         tg.sendData(altText);
         tg.close();
     });
 
-    albert.addEventListener("click", () => {
+    albert.addEventListener("click", function() {
         var altText = this.querySelector(".image").alt;
         tg.sendData(altText);
         tg.close();
     });
-
 
 
 </script>
